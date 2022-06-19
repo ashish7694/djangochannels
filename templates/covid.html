@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+{% comment %} <p>{{response}}</p> {% endcomment %}
+{% comment %} <p>{{i}}</p> {% endcomment %}
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">country</th>
+        <th scope="col">slug</th>
+        <th scope="col">iso2</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for i in response %}
+      <tr>
+        <td><p>{{i.Country}}</p></td>
+        <td><p>{{i.Slug}}</p></td>
+        <td><td><p>{{i.ISO2}}</p></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+</body>
+</html>
